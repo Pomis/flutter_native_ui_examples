@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_examples/1_tap_effects/tap_area_example.dart';
 
 import '2_adaptive_refresh_indicator/adaptive_refresh_indicator_example.dart';
+import '2_adaptive_refresh_indicator_advanced/adaptive_refresh_indicator_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -85,6 +86,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return AdaptiveRefreshIndicatorExample();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("02. Refresh Indicator — Slivers"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return AdaptiveRefreshIndicatorExample2();
                   },
                 ));
               },
