@@ -5,6 +5,7 @@ import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_never_scrolla
 import '2_adaptive_refresh_indicator/adaptive_refresh_indicator_example.dart';
 import '2_adaptive_refresh_indicator_advanced/adaptive_refresh_indicator_example.dart';
 import '3_list_view_mistakes/list_view_extent.dart';
+import '3_list_view_mistakes/list_view_padding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -118,6 +119,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return ListViewExtent();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("03. ListView — Padding"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ListViewPadding();
                   },
                 ));
               },
