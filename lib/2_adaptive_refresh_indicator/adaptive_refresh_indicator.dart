@@ -35,7 +35,8 @@ class _AndroidAdaptiveRefreshIdicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RefreshIndicator(onRefresh: onRefresh, child: SingleChildScrollView(child: child));
+    return RefreshIndicator(
+        onRefresh: onRefresh, child: SingleChildScrollView(child: child));
   }
 }
 
@@ -56,6 +57,9 @@ class _IOSAdaptiveRefreshIdicator extends StatelessWidget {
         parent: AlwaysScrollableScrollPhysics(),
       ),
       slivers: [
+        SliverToBoxAdapter(
+          child: Container(height: 100, width: 100, color: Colors.red),
+        ),
         CupertinoSliverRefreshControl(
           onRefresh: onRefresh,
         ),

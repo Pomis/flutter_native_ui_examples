@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_examples/1_tap_effects/tap_area_example.dart';
+import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_never_scrollable_slivers.dart';
 
 import '2_adaptive_refresh_indicator/adaptive_refresh_indicator_example.dart';
 import '2_adaptive_refresh_indicator_advanced/adaptive_refresh_indicator_example.dart';
+import '3_list_view_mistakes/list_view_extent.dart';
 
 void main() {
   runApp(const MyApp());
@@ -96,6 +98,26 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return AdaptiveRefreshIndicatorExample2();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("03. ListView — Never Scrollable Physics (Slivers)"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ListViewNeverScrollableSlivers();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("03. ListView — Extent"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ListViewExtent();
                   },
                 ));
               },
