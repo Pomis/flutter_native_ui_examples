@@ -6,6 +6,7 @@ import '2_adaptive_refresh_indicator/adaptive_refresh_indicator_example.dart';
 import '2_adaptive_refresh_indicator_advanced/adaptive_refresh_indicator_example.dart';
 import '3_list_view_mistakes/list_view_extent.dart';
 import '3_list_view_mistakes/list_view_padding.dart';
+import '4_text_scaling/text_scaling.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,23 +21,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+      ),
+      builder: (_, child) => MediaQuery(
+        data: MediaQuery.of(context).copyWith(
+          textScaler: MediaQuery.of(context)
+              .textScaler
+              .clamp(minScaleFactor: 0.8, maxScaleFactor: 1.6),
+        ),
+        child: child!,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -45,15 +39,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
 
   final String title;
 
@@ -129,6 +114,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return ListViewPadding();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("04. TextScaling"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return TextScaling();
                   },
                 ));
               },

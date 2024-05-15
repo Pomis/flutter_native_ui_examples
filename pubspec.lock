@@ -41,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+  csv:
+    dependency: transitive
+    description:
+      name: csv
+      sha256: "63ed2871dd6471193dffc52c0e6c76fb86269c00244d244297abbb355c84a86e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.1.1"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -75,6 +83,29 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  i18n:
+    dependency: "direct main"
+    description:
+      path: i18n
+      relative: true
+    source: path
+    version: "0.0.1"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      sha256: "910f85bce16fb5c6f614e117efa303e85a1731bb0081edf3604a2ae6e9a3cc91"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.17.0"
+  json2yaml:
+    dependency: transitive
+    description:
+      name: json2yaml
+      sha256: da94630fbc56079426fdd167ae58373286f603371075b69bf46d848d63ba3e51
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
   lints:
     dependency: transitive
     description:
@@ -120,6 +151,22 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  slang:
+    dependency: "direct dev"
+    description:
+      name: slang
+      sha256: cf850695aa80d7144bf97be38a7ff46c7aa14ec9277b205a15dfbf427b5a98bc
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.15.0"
+  slang_flutter:
+    dependency: "direct main"
+    description:
+      name: slang_flutter
+      sha256: ce5b1caba362a895aabd433a9152ffe826019967d0001f7e9f1cf0b0c5f17f05
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.15.0"
   source_span:
     dependency: transitive
     description:
@@ -176,6 +223,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  watcher:
+    dependency: transitive
+    description:
+      name: watcher
+      sha256: "3d2ad6751b3c16cf07c7fca317a1413b3f26530319181b37e3b9039b84fc01d8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   web:
     dependency: transitive
     description:
@@ -184,5 +239,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.0"
+  yaml:
+    dependency: transitive
+    description:
+      name: yaml
+      sha256: "75769501ea3489fca56601ff33454fe45507ea3bfb014161abc3b43ae25989d5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
 sdks:
   dart: ">=3.2.3 <4.0.0"
+  flutter: ">=3.7.0"

@@ -1,0 +1,10 @@
+{
+    "tasksDone": {
+        "one": "You have done $completed of $n tasks",
+        "other": "You have done $completed of $n tasks"
+    },
+    "tasksDoneShort": {
+        "one": "$completed/$n tasks done",
+        "other": "$completed/$n tasks done"
+    }
+}
