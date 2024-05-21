@@ -30,10 +30,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   cupertino_icons: ^1.0.2
   slang_flutter: 3.15.0
-  intl: ^0.17.0
+  intl: ^0.18.1
+  styled_text:
+    git:
+      ref: bd403bd6c7c7df422b8d13e14b995662818fd9a9
+      url: https://github.com/Maatteogekko/styled_text_package.git
+      path: styled_text
   i18n:
     path: i18n
 

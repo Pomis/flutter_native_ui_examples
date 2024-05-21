@@ -1,0 +1,17 @@
+{
+    "tasksDone": {
+        "one": "You have done $completed of $n tasks",
+        "other": "You have done $completed of $n tasks"
+    },
+    "tasksDoneShort": {
+        "one": "$completed/$n tasks done",
+        "other": "$completed/$n tasks done"
+    },
+    "agreeWithTerms": "Ich habe die <a action='OPEN_TC'>Bedingungen</a> und <a action='OPEN_PP'>Datenschutzrichtlinie</a> gelesen und akzeptiere sie",
+    "usersOnline": {
+        "one": "$n пользователь онлайн",
+        "few": "$n пользователя онлайн",
+        "many": "$n пользователей онлайн",
+        "other": "$n пользователя онлайн"
+    }
+}

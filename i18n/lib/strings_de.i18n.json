@@ -7,10 +7,9 @@
         "one": "$completed/$n tasks done",
         "other": "$completed/$n tasks done"
     },
-    "agreeWithTerms": "I have read and agree with <a action='OPEN_TC'>terms and conditions</a>, <a action='OPEN_PP'>privacy policy</a>",
+    "agreeWithTerms": "Ich habe die <a action='OPEN_TC'>Bedingungen</a> und <a action='OPEN_PP'>Datenschutzrichtlinie</a> gelesen und akzeptiere sie",
     "usersOnline": {
         "one": "$n user online",
         "other": "$n users online"
     }
-
 }

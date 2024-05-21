@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
-/// Locales: 1
-/// Strings: 4
+/// Locales: 3
+/// Strings: 23 (7 per locale)
 ///
-/// Built on 2024-05-15 at 15:13 UTC
+/// Built on 2024-05-21 at 10:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -22,7 +22,9 @@ const AppLocale _baseLocale = AppLocale.en;
 /// - Locale locale = AppLocale.en.flutterLocale // get flutter locale from enum
 /// - if (LocaleSettings.currentLocale == AppLocale.en) // locale check
 enum AppLocale with BaseAppLocale<AppLocale, StringsEn> {
-	en(languageCode: 'en', build: StringsEn.build);
+	en(languageCode: 'en', build: StringsEn.build),
+	de(languageCode: 'de', build: StringsDe.build),
+	ru(languageCode: 'ru', build: StringsRu.build);
 
 	const AppLocale({required this.languageCode, this.scriptCode, this.countryCode, required this.build}); // ignore: unused_element
 
@@ -146,5 +148,82 @@ class StringsEn implements BaseTranslations<AppLocale, StringsEn> {
 	String tasksDoneShort({required num n, required Object completed}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('en'))(n,
 		one: '${completed}/${n} tasks done',
 		other: '${completed}/${n} tasks done',
+	);
+	String get agreeWithTerms => 'I have read and agree with <a action=\'OPEN_TC\'>terms and conditions</a>, <a action=\'OPEN_PP\'>privacy policy</a>';
+	String usersOnline({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('en'))(n,
+		one: '${n} user online',
+		other: '${n} users online',
+	);
+}
+
+// Path: <root>
+class StringsDe implements StringsEn {
+
+	/// You can call this constructor and build your own translation instance of this locale.
+	/// Constructing via the enum [AppLocale.build] is preferred.
+	StringsDe.build({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver})
+		: assert(overrides == null, 'Set "translation_overrides: true" in order to enable this feature.'),
+		  $meta = TranslationMetadata(
+		    locale: AppLocale.de,
+		    overrides: overrides ?? {},
+		    cardinalResolver: cardinalResolver,
+		    ordinalResolver: ordinalResolver,
+		  );
+
+	/// Metadata for the translations of <de>.
+	@override final TranslationMetadata<AppLocale, StringsEn> $meta;
+
+	@override late final StringsDe _root = this; // ignore: unused_field
+
+	// Translations
+	@override String tasksDone({required num n, required Object completed}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('de'))(n,
+		one: 'You have done ${completed} of ${n} tasks',
+		other: 'You have done ${completed} of ${n} tasks',
+	);
+	@override String tasksDoneShort({required num n, required Object completed}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('de'))(n,
+		one: '${completed}/${n} tasks done',
+		other: '${completed}/${n} tasks done',
+	);
+	@override String get agreeWithTerms => 'Ich habe die <a action=\'OPEN_TC\'>Bedingungen</a> und <a action=\'OPEN_PP\'>Datenschutzrichtlinie</a> gelesen und akzeptiere sie';
+	@override String usersOnline({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('de'))(n,
+		one: '${n} user online',
+		other: '${n} users online',
+	);
+}
+
+// Path: <root>
+class StringsRu implements StringsEn {
+
+	/// You can call this constructor and build your own translation instance of this locale.
+	/// Constructing via the enum [AppLocale.build] is preferred.
+	StringsRu.build({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver})
+		: assert(overrides == null, 'Set "translation_overrides: true" in order to enable this feature.'),
+		  $meta = TranslationMetadata(
+		    locale: AppLocale.ru,
+		    overrides: overrides ?? {},
+		    cardinalResolver: cardinalResolver,
+		    ordinalResolver: ordinalResolver,
+		  );
+
+	/// Metadata for the translations of <ru>.
+	@override final TranslationMetadata<AppLocale, StringsEn> $meta;
+
+	@override late final StringsRu _root = this; // ignore: unused_field
+
+	// Translations
+	@override String tasksDone({required num n, required Object completed}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('ru'))(n,
+		one: 'You have done ${completed} of ${n} tasks',
+		other: 'You have done ${completed} of ${n} tasks',
+	);
+	@override String tasksDoneShort({required num n, required Object completed}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('ru'))(n,
+		one: '${completed}/${n} tasks done',
+		other: '${completed}/${n} tasks done',
+	);
+	@override String get agreeWithTerms => 'Ich habe die <a action=\'OPEN_TC\'>Bedingungen</a> und <a action=\'OPEN_PP\'>Datenschutzrichtlinie</a> gelesen und akzeptiere sie';
+	@override String usersOnline({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('ru'))(n,
+		one: '${n} пользователь онлайн',
+		few: '${n} пользователя онлайн',
+		many: '${n} пользователей онлайн',
+		other: '${n} пользователя онлайн',
 	);
 }
