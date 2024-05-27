@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_ui_examples/1_tap_effects/tap_area_example.dart';
 import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_never_scrollable_slivers.dart';
 import 'package:flutter_ui_examples/5_localization/localization_example.dart';
+import 'package:flutter_ui_examples/6_widget_state_property/widget_state_property_example.dart';
 
 import '2_adaptive_refresh_indicator/adaptive_refresh_indicator_example.dart';
 import '2_adaptive_refresh_indicator_advanced/adaptive_refresh_indicator_example.dart';
@@ -154,6 +155,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return LocalizationExample();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("06. Widget State Properties"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return WidgetStatePropertyExample();
                   },
                 ));
               },

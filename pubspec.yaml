@@ -35,7 +35,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   slang_flutter: 3.15.0
-  intl: ^0.18.1
+  intl: ^0.19.0
   styled_text:
     git:
       ref: bd403bd6c7c7df422b8d13e14b995662818fd9a9
