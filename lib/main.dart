@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_ui_examples/1_tap_effects/tap_area_example.dart';
+import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_keys.dart';
 import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_never_scrollable_slivers.dart';
 import 'package:flutter_ui_examples/5_localization/localization_example.dart';
 import 'package:flutter_ui_examples/6_widget_state_property/widget_state_property_example.dart';
@@ -16,17 +17,27 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final Widget? child;
+
+  const MyApp({super.key, this.child});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      showPerformanceOverlay: true,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+          switchTheme: SwitchThemeData(
+            trackOutlineColor: WidgetStateProperty.resolveWith((states) {
+              return states.contains(WidgetState.selected)
+                  ? Colors.white
+                  : null;
+            }),
+            trackOutlineWidth: WidgetStateProperty.all(1.0),
+          )),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -53,7 +64,7 @@ class MyApp extends StatelessWidget {
         ),
         child: child!,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: child ?? const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -135,6 +146,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return ListViewPadding();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("04. ListView — Keys"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ListViewKeys.noKeys();
                   },
                 ));
               },

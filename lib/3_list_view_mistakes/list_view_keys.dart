@@ -1,22 +1,40 @@
 import 'package:flutter/material.dart';
 
+final _globalKeys = List.generate(200, (_) => GlobalKey());
+
 class ListViewKeys extends StatelessWidget {
-  const ListViewKeys({super.key});
+  final bool useGlobalKeys;
+  final bool useValueKeys;
+
+  const ListViewKeys._({super.key, required this.useGlobalKeys, required this.useValueKeys});
+
+  factory ListViewKeys.globalKeys() {
+    return const ListViewKeys._(useGlobalKeys: true, useValueKeys: false);
+  }
+
+  factory ListViewKeys.valueKeys() {
+    return const ListViewKeys._(useGlobalKeys: false, useValueKeys: true);
+  }
+
+  factory ListViewKeys.noKeys() {
+    return const ListViewKeys._(useGlobalKeys: false, useValueKeys: false);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("ListView keys")),
       body: ListView.builder(
+        restorationId: 'news_feed',
         itemCount: 200,
         prototypeItem: const _ListItem(null),
         itemBuilder: (context, index) {
           if (index == 199) {
             return const _ListItem(199, key: ValueKey("last_item"));
           }
-
-          return _ListItem(index);
+          final key = useGlobalKeys ? _globalKeys[index] : useValueKeys ? ValueKey("item_$index") : null;
           
+          return _ListItem(index, key: key);
         },
       ),
     );
