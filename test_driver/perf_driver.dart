@@ -3,9 +3,9 @@ import 'package:integration_test/integration_test_driver.dart';
 
 Future<void> main() {
   Future writeTimeline(Map<String, dynamic>? data, String timelineName) async {
-    if (data != null) {
+    if (data?[timelineName] != null) {
       final timeline = driver.Timeline.fromJson(
-        data[timelineName] as Map<String, dynamic>,
+        data![timelineName] as Map<String, dynamic>,
       );
 
       // Convert the Timeline into a TimelineSummary that's easier to
@@ -24,12 +24,13 @@ Future<void> main() {
         includeSummary: true,
       );
     }
-    ;
   }
 
   return integrationDriver(responseDataCallback: (data) async {
     await writeTimeline(data, 'scrolling_timeline_no_keys');
     await writeTimeline(data, 'scrolling_timeline_global_keys');
     await writeTimeline(data, 'scrolling_timeline_value_keys');
+    await writeTimeline(data, 'scrolling_timeline_sliver');
+    await writeTimeline(data, 'scrolling_timeline_shrink_wrap');
   });
 }

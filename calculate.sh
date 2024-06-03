@@ -8,6 +8,7 @@ PATTERNS=(
   "scrolling_timeline_global_keys_*.timeline_summary.json"
   "scrolling_timeline_no_keys_*.timeline_summary.json"
   "scrolling_timeline_value_keys_*.timeline_summary.json"
+  "scrolling_timeline_value_keys_*.timeline_summary.json"
 )
 
 # Function to calculate the average of a given field for a given pattern
