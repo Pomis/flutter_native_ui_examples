@@ -18,6 +18,7 @@ Future<void> main() {
       // Optionally, save the summary to disk by setting includeSummary
       // to true
       print("Saving ${timelineName}_${DateTime.now().millisecondsSinceEpoch}");
+      
       await summary.writeTimelineToFile(
         '${timelineName}_${DateTime.now().millisecondsSinceEpoch}',
         pretty: true,
@@ -31,6 +32,8 @@ Future<void> main() {
     await writeTimeline(data, 'scrolling_timeline_global_keys');
     await writeTimeline(data, 'scrolling_timeline_value_keys');
     await writeTimeline(data, 'scrolling_timeline_sliver');
+    await writeTimeline(data, 'scrolling_timeline_slivers_prototype');
+    await writeTimeline(data, 'scrolling_timeline_shrink_wrap_never_scrollable');
     await writeTimeline(data, 'scrolling_timeline_shrink_wrap');
   });
 }

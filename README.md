@@ -5,7 +5,7 @@ Part 2: https://medium.com/@pomis172/making-flutter-apps-look-more-native-part-2
 
 
 ```
-./calculate.sh average_frame_build_time_millis worst_frame_build_time_millis 
+./calculate.sh average_frame_build_time_millis worst_frame_build_time_millis average_frame_rasterizer_time_millis worst_frame_rasterizer_time_millis
 ```
 
 ```

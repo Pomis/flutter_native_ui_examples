@@ -7,7 +7,8 @@ import 'package:integration_test/integration_test.dart';
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  Future<void> _test(WidgetTester tester, Widget child, String reportKey) async {
+  Future<void> _test(
+      WidgetTester tester, Widget child, String reportKey) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp(child: child));
 
@@ -34,11 +35,12 @@ void main() {
   });
 
   testWidgets('Scrolling test global keys', (tester) async {
-    await _test(tester, ListViewKeys.globalKeys(),'scrolling_timeline_global_keys');
+    await _test(
+        tester, ListViewKeys.globalKeys(), 'scrolling_timeline_global_keys');
   });
 
   testWidgets('Scrolling test value keys', (tester) async {
-    await _test(tester, ListViewKeys.valueKeys(),'scrolling_timeline_value_keys');
+    await _test(
+        tester, ListViewKeys.valueKeys(), 'scrolling_timeline_value_keys');
   });
-
 }
