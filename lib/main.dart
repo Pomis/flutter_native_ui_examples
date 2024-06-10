@@ -5,12 +5,14 @@ import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_keys.dart';
 import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_never_scrollable_slivers.dart';
 import 'package:flutter_ui_examples/5_localization/localization_example.dart';
 import 'package:flutter_ui_examples/6_widget_state_property/widget_state_property_example.dart';
+import 'package:flutter_ui_examples/7_images/images_example.dart';
 
 import '2_adaptive_refresh_indicator/adaptive_refresh_indicator_example.dart';
 import '2_adaptive_refresh_indicator_advanced/adaptive_refresh_indicator_example.dart';
 import '3_list_view_mistakes/list_view_extent.dart';
 import '3_list_view_mistakes/list_view_padding.dart';
 import '4_text_scaling/text_scaling.dart';
+import '7_images/images_example_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      showPerformanceOverlay: true,
+      // showPerformanceOverlay: true,
       theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
@@ -186,6 +188,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return WidgetStatePropertyExample();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("07. Images"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ImagesExampleList();
                   },
                 ));
               },
