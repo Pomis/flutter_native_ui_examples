@@ -62,21 +62,21 @@ class ImagesExampleList extends StatelessWidget {
               ));
             },
           ),
-TextButton(
-  child: const Text("Precache image"),
-  onPressed: () async {
-    cacheSize() => PaintingBinding.instance.imageCache.currentSizeBytes.toString();
-    print(cacheSize());
-    final asset = Image.asset(
-      "assets/6392956.jpg",
-      height: 100,
-      width: 300,
-      cacheHeight: (100 * MediaQuery.of(context).devicePixelRatio).toInt(),
-    );
-    await precacheImage(asset.image, context);
-    print(cacheSize());
-  },
-)
+          TextButton(
+            child: const Text("Precache image"),
+            onPressed: () async {
+              cacheSize() => PaintingBinding.instance.imageCache.currentSizeBytes.toString();
+              print(cacheSize());
+              final asset = Image.asset(
+                "assets/6392956.jpg",
+                height: 100,
+                width: 300,
+                cacheHeight: (100 * MediaQuery.of(context).devicePixelRatio).toInt(),
+              );
+              await precacheImage(asset.image, context);
+              print(cacheSize());
+            },
+          )
         ],
       ),
     );
