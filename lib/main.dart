@@ -13,6 +13,7 @@ import '3_list_view_mistakes/list_view_extent.dart';
 import '3_list_view_mistakes/list_view_padding.dart';
 import '4_text_scaling/text_scaling.dart';
 import '7_images/images_example_list.dart';
+import '8_shapes/shapes_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -198,6 +199,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return ImagesExampleList();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("08. Shapes"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ShapesExample();
                   },
                 ));
               },

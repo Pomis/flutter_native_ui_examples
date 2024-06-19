@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:i18n/strings.g.dart';
 import 'package:intl/intl.dart';
 import 'package:styled_text/styled_text.dart';
@@ -45,6 +46,7 @@ class _LocalizationExampleState extends State<LocalizationExample> {
             },
           ),
           Text(t.usersOnline(n: 3)),
+          Text("köpək", style: GoogleFonts.aDLaMDisplay(fontSize: 30))
         ],
       ),
     );

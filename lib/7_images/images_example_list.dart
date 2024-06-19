@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_ui_examples/7_images/images_example.dart';
 
 class ImagesExampleList extends StatelessWidget {
@@ -133,6 +134,10 @@ class _OriginalSizedImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    RestorationManager;
+    RestorationScope;
+    RestorationMixin;
+    CircularNotchedRectangle;
     return Image.asset(
       "assets/6392956.jpg",
       height: 100,
