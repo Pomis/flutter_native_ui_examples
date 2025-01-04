@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter_ui_examples/7_images/images_example.dart';
 
 class ImagesExampleList extends StatelessWidget {
@@ -158,5 +159,14 @@ class _CacheHeightImage extends StatelessWidget {
       width: 300,
       cacheHeight: (height * MediaQuery.of(context).devicePixelRatio).toInt(),
     );
+  }
+}
+
+class SvgTintExample extends StatelessWidget {
+  const SvgTintExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SvgPicture.network("https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Vector-based_example.svg/800px-Vector-based_example.svg", color: Colors.red,);
   }
 }

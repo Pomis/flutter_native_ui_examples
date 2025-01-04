@@ -37,11 +37,9 @@ dependencies:
   slang_flutter: 3.15.0
   intl: ^0.19.0
   google_fonts: ^6.2.1
-  styled_text:
-    git:
-      ref: bd403bd6c7c7df422b8d13e14b995662818fd9a9
-      url: https://github.com/Maatteogekko/styled_text_package.git
-      path: styled_text
+  flutter_svg: 2.0.10+1
+  deferred_indexed_stack: ^0.0.4
+  styled_text: 9.0.0-beta-4
   i18n:
     path: i18n
 

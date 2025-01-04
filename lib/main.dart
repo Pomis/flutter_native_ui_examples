@@ -1,11 +1,16 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_ui_examples/10_media_query/media_query_example.dart';
+import 'package:flutter_ui_examples/12_gestures/custom_tap_detector.dart';
+import 'package:flutter_ui_examples/12_gestures/gestures_page.dart';
 import 'package:flutter_ui_examples/1_tap_effects/tap_area_example.dart';
 import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_keys.dart';
 import 'package:flutter_ui_examples/3_list_view_mistakes/list_view_never_scrollable_slivers.dart';
 import 'package:flutter_ui_examples/5_localization/localization_example.dart';
 import 'package:flutter_ui_examples/6_widget_state_property/widget_state_property_example.dart';
 import 'package:flutter_ui_examples/7_images/images_example.dart';
+import 'package:flutter_ui_examples/9_layers/layers_example.dart';
 
 import '2_adaptive_refresh_indicator/adaptive_refresh_indicator_example.dart';
 import '2_adaptive_refresh_indicator_advanced/adaptive_refresh_indicator_example.dart';
@@ -61,6 +66,7 @@ class MyApp extends StatelessWidget {
       },
       builder: (_, child) => MediaQuery(
         data: MediaQuery.of(context).copyWith(
+          gestureSettings: const DeviceGestureSettings(touchSlop: 30),
           textScaler: MediaQuery.of(context)
               .textScaler
               .clamp(minScaleFactor: 0.8, maxScaleFactor: 1.6),
@@ -209,6 +215,36 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
                     return ShapesExample();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("09. Layers"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return LayersExample();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("10. MediaQuery"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return MediaQueryExample();
+                  },
+                ));
+              },
+            ),
+            TextButton(
+              child: Text("12. Gestures"),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return GesturesPage();
                   },
                 ));
               },
