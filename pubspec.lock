@@ -406,12 +406,11 @@ packages:
   styled_text:
     dependency: "direct main"
     description:
-      path: styled_text
-      ref: bd403bd6c7c7df422b8d13e14b995662818fd9a9
-      resolved-ref: bd403bd6c7c7df422b8d13e14b995662818fd9a9
-      url: "https://github.com/Maatteogekko/styled_text_package.git"
-    source: git
-    version: "8.1.0"
+      name: styled_text
+      sha256: a88ad8017a74e26ee56890c6df1f006159e59385e30a582130408303a4efd2d7
+      url: "https://pub.dev"
+    source: hosted
+    version: "9.0.0-beta-4"
   sync_http:
     dependency: transitive
     description:
@@ -532,6 +531,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.5.0"
+  xmlstream:
+    dependency: transitive
+    description:
+      name: xmlstream
+      sha256: cfc14e3f256997897df9481ae630d94c2d85ada5187ebeb868bb1aabc2c977b4
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   yaml:
     dependency: transitive
     description:

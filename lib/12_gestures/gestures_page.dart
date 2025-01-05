@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_examples/12_gestures/custom_button.dart';
-import 'package:flutter_ui_examples/12_gestures/custom_scale_detector.dart';
 import 'package:flutter_ui_examples/12_gestures/custom_tap_detector.dart';
-import 'package:flutter_ui_examples/12_gestures/pan_detector.dart';
+import 'transform_scale_detector.dart';
 
 class GesturesPage extends StatelessWidget {
   const GesturesPage({super.key});
@@ -22,19 +21,20 @@ class GesturesPage extends StatelessWidget {
                 color: Colors.red,
               ),
             ),
-            PanDetector(
-              child: Container(
-                height: 300,
-                width: 300,
-                color: Colors.black12,
-              ),
-            ),
+            // PanDetector(
+            //   child: Container(
+            //     height: 300,
+            //     width: 300,
+            //     color: Colors.black12,
+            //   ),
+            // ),
             CustomGestureButton(
               onTap: () => print("Tapped"),
             ),
-            SizedBox(height: 100),
-
-            CustomScaleDetector(),
+            const SizedBox(height: 100),
+            // const CustomScaleDetector(),
+            const SizedBox(height: 20),
+            const TransformScaleDetector(),
           ],
         ),
       ),

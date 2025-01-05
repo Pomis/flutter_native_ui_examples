@@ -81,15 +81,6 @@ class _CustomGestureButton extends State<CustomGestureButton> {
   }
 
   double translateDistance(double distance, double limit) {
-    double x;
-    if (distance > limit) {
-      x = limit;
-    } else if (distance < -limit) {
-      x = -limit;
-    } else {
-      x = distance;
-    }
-
-    return limit * sin(x / limit);
+    return limit * sin(distance.clamp(-limit, limit) / limit);
   }
 }
