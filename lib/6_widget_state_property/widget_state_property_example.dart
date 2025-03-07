@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_examples/6_widget_state_property/selectable_button.dart';
 import 'package:flutter_ui_examples/6_widget_state_property/tap_area_2.dart';
 
 import 'card_example.dart';
@@ -23,6 +24,8 @@ class _WidgetStatePropertyExampleState
           padding: const EdgeInsets.all(40),
           child: Column(
             children: [
+              const SelectableButton(isSelected: false),
+              const SizedBox(height: 40),
               const CardExample(),
               const SizedBox(height: 40),
               _ButtonExample(statesController: _statesController),
